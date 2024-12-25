@@ -182,7 +182,7 @@ class CsvExporter extends AbstractExporter
                 foreach ($current as $index => $record) {
                     fputcsv($handle, $this->getVisiableFields($record, $original[$index]));
                 }
-            });
+            }, 1000);
             fclose($handle);
         };
 
